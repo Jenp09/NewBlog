@@ -1,0 +1,71 @@
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+.topbar {
+  background-color: #CDE;
+  color: white;
+  width: 100%;
+  z-index: 9999;
+  padding: 5px 20px;
+}
+.topbar h1 {
+  cursor: pointer;
+}
+.topbar nav {
+  margin-top: 25px;
+    background: #CDE;
+}
+.topbar nav ul {
+  padding: 0;
+  margin: 0;
+}
+.topbar nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+.topbar nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.post {
+  transition: 0.5s linear all;
+  opacity: 1;
+  padding-bottom: 30px;
+}
+
+.comments ul li {
+  list-style-type: none;
+  padding: 20px 5px;
+  border-bottom: 1px #79B9D2 solid;
+}
+.post.ng-hide {
+  opacity: 0;
+}
+.post.ng-hide-add,
+.post.ng-hide-remove {
+  display: block!important;
+}
+form {
+  width: 100%;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1em;
+}
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
+.ng-valid.ng-dirty {
+  border-color: green;
+   
+
+
