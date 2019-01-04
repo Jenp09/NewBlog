@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Post</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+    <link rel="stylesheet" href="CSS/Post.css">
+    <style>
+        img {
+            max-width: 100%;
+            padding: 20px 60px;
+
+        }
+
+        h2 {
+            padding: 3px 60px;
+            color: #79B9D2;
+
+
+        }
+
+        p {
+            padding: 3px 60px;
+        }
+
+        .Title {
+            color: #79B9D2;
+            font-size: 20px;
+
+        }
+
+        .Sub-Heading {
+            padding: 0px 60px;
+            color: #79B9D2;
+        }
+
+        .Post {
+            font-size: 25px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <body ng-app="blogApp">
+
+        <div ng-controller="BlogController as blog">
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-s-4">
+                            <div class="Title">
+                                <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+                            </div>
+                        </div>
+                        <div class="offset-s-4 col-s-4">
+                            <nav role='navigation' class="push-right">
+                                <ul>
+                                    <div class="Post">
+                                        <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li>
+                                    </div>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <ul class="post-grid" ng-show="blog.isSelected('blog')">
+                            <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+
+                            </li>
+                        </ul>
+                        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+                            <div>
+
+                                <h2>Artificial Intelligence</h2>
+                                <img src="robot.jpeg" />
+
+                                <div class="post-body">
+                                    <p ng-repeat="paragraph in post.body">
+                                        We are living in the 21st century where a vast majority of technologies are sophisticated. Because of the maturation of the human brain, humans become much more talented to have the ability to create something unique that we will be using today. ATM, for example, is a real-time machine we are using in our everyday’s lives. This machine involves heavy machine learning algorithm which can also be used as a form of AI(Artificial Intelligence).
+                                    </p>
+                                    <p>Machine Learning and Artificial Intelligence are the two popular terms we are discussing in our day to day basis. Often, we will hear them in the news or on the radio. But what exactly are they? In this essay, I will look at Artificial Intelligence in depth, then Machine Learning next.</p>
+                                    <div class="Sub-Heading">
+                                        <h3> Artificial Intelligence</h3>
+                                    </div>
+                                    <p>Artificial Intelligence can separate into two different words: ‘Artificial’ and ‘Intelligence’. The word ‘artificial’ is quite self-explanatory. It is something that human creates. ‘Intelligence’ means the ability to learn or understand or to deal with new or trying situations. Therefore, the term can be defined as a machine with the ability to solve problems that are usually done by humans with our natural intelligence. The idea of artificial intelligence was finalised by the father of AI, John McCarthy, in the late 1950s. In the early 1950s, an English computer scientist who named Alan Turing proposed the Turing Test as a measure of machine intelligence. But what does this have to do with AI?</p>
+                                    <div class="Sub-Heading">
+                                        <h3>The Turing Test</h3>
+                                    </div>
+                                    <p>First, let me give you an explanation what Turing Test actually is. Turing Test was developed by Alan Turing, an English mathematician, in 1950. It was an experiment decided to test whether a computer had the ability to think like a human being. Turing proposed that a computer could be said to possess artificial intelligence if it could imitate human responses in a particular situation. The test was originally referred to as ‘the imitation game’ which required three terminals where a device was operated by a computer and two were operated by humans.</p>
+                                    <p>During the test, one human was the questioner while the second human and the computer were the respondents. The respondents were interrogated about a certain area of subjects, using a specific format and context. After asking a number of questions, the questioner was asked to determine which respondent was human and which was a computer. The test was continuously repeated in order to create a fair test. If the questioner makes the correct determination in more than half of the questions, then the computer is considered to have an artificial intelligence. After all, Alan Turing wanted to see if the computer actually did have AI.</p>
+                                    <p>For hundreds of thousands of years, however, the Turing Test had been widely criticized. The question of whether or not a computer can pass a Turing Test had become irrelevant. They should be focusing on making a human-machine interaction by using a conversational interface. The robot Sophia, for instance, is a social humanoid robot developed by Hong Kong based company called Hanson Robotics. Sophia was activated on April 19, 2015, and is able to start a natural conversation easily without having any technological issues. She can even act like a normal human by showing more than 60 different facial expressions, track and recognise faces. By creating a robot, they can be able to serve humans and take our jobs productively. To give you a clearer understanding of what AI is, here are a few examples: computer vision, machine learning, natural language processing, and knowledge management.</p>
+                                    <p>Artificial Intelligence can be categorised into two different Intelligence. They are strong AI or Artificial General Intelligence and weak AI or it can refer to as Artificial Narrow Intelligence. Strong AI is equivalent to human intelligence which can mimic the human brain by doing all sorts of activities that we can all do by creating a scientist being. Weak AI is a system that behaves like a human but does not give us an insight into how the brain works. To give you a quick example, computer chess uses AI to predict a million of moves before making the actual moves. Very intelligent, isn’t? Deep learning has a similar system that can also mimic the human brain by using neural networks but it does not follow exactly the function. The system uses nodes that act as artificial neurons to connect information. To be more precise, deep learning is a branch of machine learning which based on learning data representations, as opposed to task-specific algorithms. But what is machine learning?</p>
+                                    <div class="Sub-Heading">
+                                        <h3>Machine Learning</h3>
+                                    </div>
+                                    <p>Machine Learning is the based idea of Artificial Intelligence. It uses algorithms to get trained data set and learn to predict the upcoming events in the future. Let’s say a programmer wants to create a program that can recognise a dog but he has not an idea how. Instead, he can do so with a form of intelligence that can learn to do it. If he gives the program sufficient image data in the form of dogs and let it process and learn and when you give the program an image of a new dog that it has never seen before, it would be relatively easy to tell that it is a dog.</p>
+                                    <p>People may not realise but we are all using AI in our daily routine. Siri, Alexa, and Google Assistant are examples of artificial intelligence and these might affect our everyday lives. When we see music recommendations on Spotify and film suggestions on Netflix, there is a highly complex algorithm behind the program which teaches itself for hundreds of years. That is why the system can predict what we want and what to buy before we know ourselves.</p>
+                                    <p>
+                                        <font color="grey"><i><b>“I think we should be very careful about artificial intelligence. If I were to guess like what our biggest existential threat is, it’s probably that. So we need to be very careful with the artificial intelligence. Increasingly scientists think there should be some regulatory oversight maybe at the national and international level, just to make sure that we don’t do something very foolish. With artificial intelligence, we are summoning the demon. In all those stories where there’s the guy with the pentagram and the holy water, it’s like yeah he’s sure he can control the demon. Didn’t work out. “<br /> — Elon Musk</b></i></font>
+                                    </p>
+                                    <p>Because of well-developed technologies, we are warned that AI could be the most dangerous thing we have ever created. In fact, AI will become more intelligent than the entire human race. As a result, our human brain will become more limited every day and eventually we do not have to make decisions because the system has already foretold for us. Is this good or bad? You can all decide yourselves.</p>
+                                    <p>Aforementioned, there are Artificial General Intelligence, Artificial Narrow Intelligence, and there is a term called Artificial Super Intelligence. In the recent world, movies tend to focus more on this sort of thing, where machines are smarter and stronger than humans. When will we create general AI? Some scientists predict that it will happen in 2040 and some say it will happen in 2029. That will be the time when machines will be as powerful as the human brain. Also, the singularity will happen in 2045 according to Google. Singularity, an artificial intelligence that can rewrite its own software and becomes one per cent intelligent than a human, may take over our human lives if we do nothing about it. Eventually, human, us, will be the first to extinct at most.</p>
+                                    <p>After all, Artificial Intelligence may not be the worst thing to keep going. A human may live longer or even become immortal by having our developed AI around us, to prepare us for the worst.</p>
+                                    <div align="right">
+                                        <p>(1284 words)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</body>
+
+</html>
