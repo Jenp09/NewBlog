@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+        imgStore {
+    width: 100%;
+    height: 50%;        
+     padding: 20px 120px;
+     
+}
+
+h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 26px;
+     }   
+
+p {
+   padding: 3px 60px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      .Post {
+          font-size: 24px;
+          
+      }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                 <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li></div> 
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     
+      
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2 >Cashless Convenient Store</h2>
+            <div align="Center"> <img src="AmazonStore.jpeg" class="imgStore" width="850"></div> 
+              <br/> 
+              <div class="post-body">
+                   <p ng-repeat="paragraph in post.body">Everyone loves shopping and shopping have become part of our lifestyle especially when we do not have much food left in the fridge and we want to fill up some spaces. We do not want the fridge to be empty. Otherwise, we will not have planned meals at home. Therefore, the best way not to have our refrigerator empty is to go to a supermarket and restore our food before it is too late.</p>
+                   <p>Imagine you are having a party at home. What would you do if you run out of beers? You go out, walk to the closest supermarket, grab some beers, queue up, pay cash and run back home as soon as you can. However, have you ever think queuing up takes lots of time? Especially for those who are in a hurry, they must have queued up for a long time to just buy a bottle of water. Hence, in order to prevent this situation from happening, the founder of Amazon who named Jeff Bezos thought of an idea. Why not set up a store which does not require queuing up at all? Thus, Amazon Go officially opened to the public on Monday morning (21st January 2018) in Seattle after discussing it for two to three years.</p>
+                   <h3>The Idea of Amazon Go</h3>
+                   <p>The whole idea of Amazon Go is that customers have to download the Amazon Go app from their phone. Once they have downloaded the app, they are required to register the account if they do not have one. Once they have done all the registration, they can simply enter the store using the QR code. Basically, entering the store is similar to entering a library. You put your library card on a sensor and it will be automatically registered and you can walk in. When customers are in the store, they can put away their phone and shop as usual. Customers do not have to line up to checkout their products at all.</p>
+                   <p>Amazon Go is based on the idea of AI (Artificial Intelligence) by using Computer Vision, Sensor Vision, and Deep Learning. These are called Just Walk Out Technology. It automatically detects when products are taken from or returned to the shelves and keeps track of them in a virtual cart. When you have done shopping, the products you bought will be recorded in the Amazon Go app and you will receive a receipt shortly. By then, your Amazon account will be charged and you can leave the store without lining up or check out.</p>
+                   <h3>What is good about the store?</h3>
+                   <p>The main advantage of having this sort of store is that customers do not have to line up every time they purchase products which can save up a lot of time. Also, they do not have to check out after shopping. More importantly, US is a well-developed country and many people are good at computer science. That is one of the reasons why Jeff Bezos started to invest heavily in Amazon Go. Afterwards, he gained USD $2.8 billion after the debut, reaching the highest net worth ever.</p>
+                   <h3>Disadvantages of the store</h3>
+                   <p>Nevertheless, there are some downsides to the store. Since the store is built with technology, people can easily leave the store without charging the product. This can result in shoplifting the store. Deirdre Bosa, a CNBC tech reporter, went to Amazon Go on the next day straight after the store was opened. She got a yoghurt and something else but the system did not charge her yoghurt and she ended up shoplifting it. Fortunately, Gianna Puerini, Vice President of Amazon Go, told the public that it was a technological error that they did not have to worry about.
+                       The other factor that will affect Amazon Go is that the number of labours will be decreased because there will be very few cashiers working in the store. This leads to the downfall of labour cost since a very small number of employees get paid. Having fewer cashiers means that the chance of human interaction will be declining. Although it is a much more convenient store for customers, most people will be isolated from each other. Eventually, checkout lines will become extinct and people might be lonelier than before because there will be no communication between customers and cashiers. There is a smaller part that actual people are hired to cook fresh food and stock the shelves. But the so-called “Just Walk Out Technology” does not involve in any labour. As a result, people do not have the opportunity for lining up. However, they may argue that this is more efficient or financially prudent, but there will be a problem of isolation if more of these stores are opened to the public.
+</p>
+                   <p>Isolation is a state of being detached or separated from other people. It feels like people do not want to communicate with the outside world, not even the strangers who work in a supermarket. Eventually, they have to rely on the machine. Yet, many experts claim that humans are smarter than the machines in terms of intelligence, creativity and a common-sense knowledge or understanding of the world. Still, humans have to be more creative and keep inventing something new. Or else, they will be falling apart. Of course, there are many controversies about whether people like it or not. But whether they like it or not, the business has to be continued. The only thing they can do is to improve the store every day to become a successful company.</p>
+                   <p>Lately, I have read a <a href=" https://blog.prototypr.io/examining-the-user-experience-of-amazon-go-shopping-just-walk-out-bfeda3c9ce39">story</a>  which is written by a Medium writer who recently visited Amazon Go. He talked about how the store works and how he found the whole new experience of having no cashiers in the store. In the story, he mentioned about having a myriad of cameras in the store to track customers’ movement in case of any shoplifting issues or other technical problems. I do think this is normal seeing that most of the shops and even supermarkets have cameras as well. I tend to ignore the existence of cameras unless someone literally steals something out of the store. Another issue that he mentioned was the organization of the store. It was not a well-organized store because there were no number signs for aisles. Luckily, he still found it easy to look for the products he wanted in a small store but that can be a problem the store has to improve.</p>
+                   <p>The major concern he is having is the receipt tab in the app. When he was putting a bag of cookies into his bag, he noticed that the receipt tab did not show the item he took from the shelf until after 15 minutes he was leaving the store. One thing to prevent this from happening again is to see the item showing in the app while shopping to ensure of what would be charged. Also, the email receipt he was receiving was quite late. He had to wait for two hours to get it. Hence, it would be better to receive it in advance so that customers will not be worried about making mistakes. Of course, there is much progress to be improved. We are not expecting to have a perfect store in the first place since the successful action is accumulative. This means that you start your business by adding small efforts every day in order to enhance the value significantly of your initial step.</p>
+                   <p>Sadly, I am not a US citizen and I do not live in the USA. Therefore, I have never physically been to Amazon Go and experience the cashier-less store myself. But if I ever have a chance, I will definitely go and try it with the app. It will be interesting to walk into a shop with no lines and no checkout.</p>
+                   <h3>Future Business</h3>
+                   <p>In the next five or ten years, Amazon Go may be the future of business that can boost the economy. For now, Seattle is the only city in the US where people can experience the new technology in the store. With the population of seven million in 2016, more tourists from around the world including France, Japan and Taiwan travel to the city to visit the store after watching the news on TV at home. Most of them are fascinated by the idea of “No lines, no checkout” but there is no data to how people are finding the store yet. Let’s hope that the business will increase in the future.</p>
+                   <p>There is one question that has left unanswered which is “What if customers took off something from the wrong shelf or put back at the wrong place, would we get charged the wrong amount?” This might be a computer machine learning question that the staff is not able to explain. As a customer in the store, we can think about the answer and how we can deal with it.</p>
+                  <div align="right"><p>(1488 words)</p></div>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>
