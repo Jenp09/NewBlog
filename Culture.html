@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+ 
+
+h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 26px;
+     }   
+
+p {
+   padding: 3px 60px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      .Post {
+          font-size: 24px;
+          
+      }
+        .post-body {
+           color: #808080;
+      }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                 <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li></div> 
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     
+      
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2 >Learning Culture by Travelling</h2>
+            <div align="Center"> <img src="Pictures/Culture.jpeg"  width="850"></div> 
+              <br/> 
+              <div class="post-body">
+                  <p ng-repeat="paragraph in post.body"><b><i>“People without the knowledge of their past history, origin, and culture is like a tree without roots.” -Marcus Garvey</i> </b></p>
+              </div></div>
+                  <p>As a HongKonger, I’m auspicious to travel with my parents at my young age. Earlier, my dad asked me a question, “Why do children below 12 go on holiday?” I said that due to the reason they are still in prep school, which means that the stuff they learn at school is not as crucial as secondary students. So by all means they can go out and have fun. But then I got challenged by my dad saying something which I cannot remember. Afterwards, when I really thought about the question, I reckon they have to learn the culture in different countries to avoid culture shock if they have to study abroad or even go for business trips as they grow old. This might be one of the reasons why they should travel with their parents when they are young. Of course, you can argue my point that that isn’t right but in fact there’s no right or wrong answer to this question. You can say whatever you want as this is an open question. </p>
+            <p>When people are travelling, they don’t seem to realise how vital to the place they are visiting. Most tourists just step into a country, visit tourist attractions and go shopping to end the day. Indeed, they are content with their life. This is what normal people will do to satisfy their needs.There’s nothing wrong about it. Yet, if you think in a different perspective, you could have asked “why do we travel?” Sure, one of the reasons we travel is to enjoy life but the answer is too generic. To be more specific, we travel because we want to learn the culture from other countries. </p>
+             <p>Different countries have their own way of living. In particular, the social behaviour, the characteristic features of everyday existence, beliefs, and many other features are different from one another. Culture is a symbol of a country. If you see people wear Kimono, for example, you will think of Japan. If you see a panda, you will think of China. If you see the Merlion, you will think of that as a mascot in Singapore. I can keep going forever but that’s not the point. If you’re smart, you could have asked the next question. “How are we going to learn the culture just by visiting a country?”</p>
+             <p>For simplicity, we can talk to anyone from a different cultural background while we’re travelling. Getting to know a person is important if we want to learn the culture. It’s not necessary to talk to them directly about a specific topic but we can always find out more about their ways of living and experience. It will be best if one has friends who are from completely different culture from you.</p>
+             <p>
+I’m lucky to have an aunt who is from Japan. The reason I know her is because my dad used to work with her husband in Australia 25 years ago and they became good friends since then. Afterwards, my parents introduced me to him and his wife. Some days later their daughters came to my house when I was little and that was the time when I first met them. The most memorable moment was one of their daughters gave me a Snoopy manga which I really enjoyed reading at my young age. Nowadays, I seldom meet them as they are all busy. During this trip to Japan, we met only their mum. All of her family members and cousins have gone to India. Throughout this trip, we talked a lot and exchanged culture with each other. For instance, I know both Japan and Hong Kong have Chinese New Year and the custom in Japan is similar to us in Hong Kong. As a married couple in both country and city, they have to give out red packet money during the day and children are the receiver. The difference is that Japan has arranged marriage whereas Hong Kong doesn’t. 
+</p>
+             <p>Arranged marriage was typically common in Japan. It was once a traditional custom in the country where a man and a woman are introduced to each other by their parents to consider the possibility of marriage. According to Trends In Japan, 70% of arranged marriages were held between families in the past. Today, however, less than 10% of marriages are arranged. The reason is that men and women do not bother about relationships anymore, calling them messy and tiring, based on Wiseman. As a result, the marriage rate has been dropping since the last two years.
+This is one of the cultures I have learnt from my aunt when I met her back in Tokyo. Of course, there are many other interesting cultures in the country I can discover. I can also talk to her about all of this subject matter but it will take longer to do so,  why not doing research myself when there’s abundant information in the internet? 
+</p>
+             <p>The second culture I came across was when my parents and I were interviewed by Japan TV outside a popular soba restaurant. A journalist told us that eating soba on a New Year’s Eve is a culture. Afterwards, I did some research on the topic. The dish Japanese usually eat is called “Toshikoshi soba”, which means “year-passing” and it symbolises old year’s passing. Oftentimes, they eat it while listening to a bell which are struck at every temple throughout the country. Learning different cultures from other countries is quite fascinating. It can not only widen our knowledge but also the fact that we are living in this multicultural community we cannot stereotype on particular type of people. In fact, we are all human and we should treat each other equally despite the differential behaviour. We should also learn to accept one another and look for the positive.  In such wise, a tranquillised society will be created. </p>
+             <p>To conclude, travelling is such an amazing way of discovering other cultures by just talking to anyone with a distant background. By far, in my opinion, I think this is the most effective way to learn from each other. </p>
+             <div align="right"><p>(1032 words)</p></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>
