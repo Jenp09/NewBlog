@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+    h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 30px;
+     } 
+
+p {
+   padding: 3px 1px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      
+       .Post {
+        font-size: 25px;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                   <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li> </div>
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2>Story of Dear Evan Hansen</h2>
+            <div class=""><div align="Center"> <img src="DEH.jpeg" ></div></div> 
+          <br> <p> The winner of six Tony Awards including Best Musical, Dear Evan Hansen, is one of the most inspirational pieces of play that has influenced the majority of the audience. It has been a brand-new musical since 2016 when the production began.</p>
+              <p>Dear Evan Hansen tells a story of a 17-year-old high school senior whose parents were separated at his very young age and left him with his mother at home. He suffered from Social Anxiety Disorder as a result. He does not have the courage to talk to anyone at school, he also feels that people are bullying him. Afterwards, he goes to see a therapist for his symptom and eventually hope to cure his illness. He has to write a letter to himself as an assignment from his therapist before the first day of his senior year. His mother, Heidi, who is a busy nurses’ aide and has to go to school at night tries to connect with Evan but struggles to find a common interest with him. She recommends him to ask his friend to sign his cast, which he fell out of a tree and broke his arm before the term starts. This is clearly an attempt of his suicide but creating plenty of lies to cover up his truth. </p>
+              <p>At school, Evan sees Connor (who was originally not a good friend of him) and asks him if he could kindly sign his cast. Connor signed it, and said, “Now we can both pretend that we are friends.” From this point, Evan fabricates a friendship with Connor. Unluckily, Connor found a letter from the computer lab. He thought Evan wrote the letter and deliberately printed it out so Connor could find it. But from Evan’s personality, he would never do that. Connor misunderstands the whole thing and becomes very furious and transforms into paranoia. He takes his letter and goes away.</p>
+              <p>After a few days with no signs of Connor or Evan’s letter, Evan is in an intense state of panic and feels very anxious over what Connor might have done with it. On the same day, Evan was told to go to the principal’s office. In the office, Evan sees two grown-ups sitting there, solemnly. They introduce themselves by saying they are Connor’s parents. Connor’s dad told Evan that the principal, Mr Howard, has left and that they want to speak to him about Connor. They tell Evan that Connor took his own life a few days before, with his letter in his pocket. They ask him if he was close to Connor as Connor had never mentioned having friends before. Evan attempts to explain everything but things start to get very overwhelmed and everyone in the room cannot handle the situation well. Evan decided to leave so that he can calm himself down. At the same time, he agreed to go to their parents’ house to talk about it. </p>
+              <p>When Evan is at Murphy’s house, Murphy’s parents start to ask him about Connor and it is the time for Evan to tell them “the truth”. Evan told them that he and Connor were best friends. Sometimes, Evan hung out at Connor’s place if no one was at home and Connor would often hang out at Evan’s place. Besides, they emailed each other a lot. But when Zoe Murphy says “We looked through his emails. There aren’t any from you.”, Evan begins to lie by saying “he had a different account. A secret account.” This can immediately tell that Evan is actually a bad liar and is good at making up stories. This is also the point when Evan starts to get along well with Murphy’s parents. </p>
+              <p>
+At the time when Evan is home, Jared who is Evan’s family friend starts a conversation with him via social media. Evan told Jared that Murphy’s parents want to see their emails. From that moment, Jared has a good suggestion, which is to help Evan create fake emails for Connor so that Evan can show it to their parents, convincing that the letter is written by Connor. Evan continuously fabricates his own stories in the letter, pretending that Jared and Evan are actually genii in making up stories. 
+</p>
+              <p>As Evan shows Connor’s emails to Murphy’s parents, Zoe’s mum, Cynthia, feels very shocked that he actually has a friend and she hopes to see more of his emails. In the meantime, Zoe has trouble accepting that Connor is a good guy. Instead, he acts violently and always has an abusive behaviour towards her. Later, Evan tells Zoe that Connor actually loves her as a brother but he just doesn’t know how to approach her. Meanwhile, Evan unable to tell her the truth. Instead, he told her that Connor said to her and it ended up Evan loves her and kisses her in her brother’s bedroom. </p>
+              <p>Evan notices that everyone starts to forget Connor after a week. At that moment, Connor starts to appear beside Evan, who acts as an extension of Evan’s subconscious. He told Evan to ask his friends to do something for Connor. Afterwards, he asks Jared to start the Connor’s Project, which keeps Connor’s memory alive. At the official launch of the Connor Project, Evan gives an inspiring speech about the friendship with Connor and his loneliness. Later, his speech goes viral and it has been up online for everyone to see it. All of them are convinced that Connor is Evan’s best friend and everything Evan does is making sense and surreal. </p>
+              <p>After that, Evan and Alana begin to fundraise on the Connor Project’s website. They want to raise USD50,000 in three weeks to reopen the abandoned apple orchard that Evan and Connor used to spend time together. At the same time, Evan starts to have a new relationship with Zoe and Murphy’s parents, forgetting about his mother, the Connor Project, and Jared. When Alana sees Evan, she talks to him about how he neglects the project. At the meantime, Alana begins to feel sceptical everything about all the emails Connor addressed to Evan. She tells him that the first time he went to the orchard was the day he broke his arm. But in other emails, he talks about going there together since last November. </p>
+              <p>
+Now, other people include Jared, Alana, and Murphy’s family abandon Evan because everything he did at the first place was a lie. Alana is so fed up that Evan created a fake email account and backdate emails; she even feels very annoyed about him and Connor were actually best friends because no one sees them together, and deep down Evan is a big liar. He once again shows Alana another piece of email about his suicide note, convincing her that it is actually from Connor and she published it to the social media without his permission so that the community is concern about the issue. 
+</p>
+              <p>At Murphy’s house, Evan finally reveals all the truth starting from the beginning because he cannot attempt to excuse himself anymore as that would be unforgivable. He tells them that Connor didn’t write the letters. Evan wrote it. It was an assignment from his therapist to write a letter to himself. “Dear Evan Hansen: Today is going to be an amazing day and here’s why.” He was supposed to bring it to his appointment but unluckily Connor took it from him and he had the letter when they found him. They weren’t friends at all. Finally, Evan has to spit out everything starting from the beginning and everyone in the house hates him so much and eventually, he is left alone.  </p>
+              <p>In the final scene when Evan sees his mum, Heidi, waiting for him at home. She realised that the letter online was actually from Evan’s therapy assignments. Immediately, she apologises for not seeing how terribly he was hurting because she is busy and seldom sees Evan. He explains to her mum that his fall was a suicide attempt. Heidi recalls the day when his father moved out, how she feels so small and alone, and how she was going to make it by herself. Luckily, she knows that she still has Evan and that she doesn’t feel alone because they know that both of them can make it through everything as long as they are together. Heidi promises that she will always be there for Evan when he needs her. </p>
+              <p>After a year, Evan contacts Zoe whom he hasn’t seen after discovering the truth, asking her if she agrees to meet him again. She happily agrees and insists that they meet at the Orchard that has been reopened in Connor’s memory. He tells her that he has been reading Connor’s books that were a list of his ten favourites. He also thanks her and her parents for keeping his secret, revealing that his friendship with Conor was a lie. She forgives him, saying that everything has brought her family closer together because “Everyone needed it for something.” In the end, Evan writes the last letter for himself, reflecting on the impact he has had on his community and his hope that he will inspire others, accepting himself, at the very end. </p>
+              <p>Dear Evan Hansen is written by Steven Levenson, and the songs are lyrics are created by Benj Pasek and Justin Paul, who were the creation of La La Land. What inspired them to write this story is one of Pasek’s classmate, who had died from drug overdose. People started to talk about this boy and how terrible he was. Some students even wrote an essay about him and hopefully, more and more people can remember him as a friend. Personally, I love the whole story plot and the lyrics in each song as they are breath-taking and awe-inspiring. Although I haven’t seen the play on Broadway, I have already felt the sensation of the play which makes me want to watch it again and again. I hope it will be shown here in my city so that I can go and watch it.</p>
+               <div align="right"><p>(1670 words)</p></div>
+            </div>
+              </div>
+            </div>
+         </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>
