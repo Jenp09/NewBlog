@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+    h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 30px;
+     } 
+
+p {
+   padding: 3px 1px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      
+       .Post {
+        font-size: 25px;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                   <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li> </div>
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2>The Art of Fluency</h2>
+            <div class=""><div align="Center"> <img src="Fluency.jpeg" ></div></div> 
+              <br> <p>How do you consider to be fluent in the language you have been progressively learning for years until you are capable of communicating with a native speaker? Watching movies without reading subtitles? Or do all the things that a native speaker does without realising it? Or stop looking up vocabularies in a dictionary? Of course, there are many other factors that lead to the level of fluency and the aforementioned can be eligible. </p>
+              <p>An aspect I find deeply satisfying about the art of fluency is that when you know using Google Translate is wrong. Google Translate is simply a tool for learners to look up words or translate simple phrases or sentences that are stranger to them. Translating a long paragraph does not help them find the answers they hope to expect. Instead, it will just translate directly from words to words or translate the sentences whatever it wants. In other words, it cannot provide a perfectly accurate translation. Eventually, the likelihood of making errors will become higher. For instance, the Spanish phrase of “You’re kidding me.” is “Me estas tomando el pelo.” This works if it is input into the box. However, if it is translated into Greek, it will become “New kidding.” in English. Ultimately, confusion will occur when it comes to learning a brand-new language. Other than that, Google Translate does not follow grammar rules and the reason for that is that Google Translation uses a system based on language pair frequency that does not take into account grammatical rules. Essentially, whenever students use Google Translate to work on their assignments, teachers can instantly tell their work are from there without a second thought. Therefore, students often have to redo their work immediately.</p>
+               <p>Another factor that leads to fluency is not using subtitles when watching movies. That means that you have already understood every stage dialogue in the film and you do not have to read them every time it appears on the screen.  You also apprehend what is happening in the story and you are able to follow along with the storyline easily. Undoubtedly, learners can keep the subtitles on while watching movies in order to help them improve the language they are learning. Nevertheless, having subtitles on the screen can have drawbacks. People who watch films with subtitles can end up missing half of the story because they are just focusing on the bottom part of the screen and reading the subtitles most of the time. After all, it is quite distracting to read subtitles while watching movies. </p>
+               <p>However, do all the things a native speaker can do might not be reasonable. By definition, fluency means the quality or condition of being fluent. For example, a person is able to speak or write a foreign language easily and accurately can be said to be fluent. Things that are actionable do not consider fluent. For example, ordering coffee in a café, go to a bank, or consult a doctor, these are the normal routines that everyone can do. Even if you are not fluent in any languages, you can still do those stuff without thinking any further of what you have to do. Indeed, people might have to talk to a banker or a doctor but that is not necessary when they are travelling unless they are in real trouble unluckily. </p>
+               <p>The main important feature of the art of fluency is when a person stops reaching out for words. What it means by that is that he or she would not ask something like “what’s the word for…?” As a human, we will have to look out for words every now and then even in our own native language. Nonetheless, once you reach fluency, the rate of what you are doing will decelerate. Afterwards, you might even stop looking for opportunities to practise because you think you are beyond the level of fluency. In fact, there are hundreds of thousands of vocabularies in a dictionary that you may not know of. Hence, you cannot say you are familiar with all the words unless you have read the whole dictionary. Otherwise, you have to keep learning new words in light of improving your language. </p>
+               <p>In conclusion, there are many factors to determine a person if he or she is fluent. Therefore,  people cannot lie with the fact that they are fluent when they are not as others can tell by starting a conversation with you.</p>
+                             <div align="right"><p>(738 words)</p></div>
+            </div>
+              </div>
+            </div>
+         </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>
