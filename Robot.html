@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+    h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 30px;
+     } 
+
+p {
+   padding: 3px 1px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      
+       .Post {
+        font-size: 25px;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                   <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li> </div>
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2>What Will Happen to the Job Market Once Artificial Intelligence Outperforms Humans in Most Cognitive Tasks?</h2>
+            <div class=""><div align="Center"> <img src="AI.jpeg" ></div></div> 
+              <br> <p>
+              During our infinitesimally brief way on our tiny speck of a planet, technologies have been incessantly emerging to a new era of the digital world. Oftentimes, we have heard the term ‘Artificial Intelligence’ or AI for hundreds of thousands of times, not only in television, but also in radio, newspapers, and even in a conversation. </p>
+              <p>As we all know, Artificial Intelligence is the idea that computer programs and machines learn to perform tasks that require different types of intelligence which are usually performed by humans.  Siri, for example, is a type of AI which acts as a programmed robot to assist users to look up anything they are unsure about. However, he or she cannot answer most of their questions inasmuch some questions are not understandable. In fact, Siri is not a reliable assistant as they do not receive expected results from the robot. If we use Google translate on Siri, for example, it will directly translate word for word which is not something that we expect.  If we compare Siri to the personal assistant such as Alexa and Google assistant, they may give us a more precise answer but in return we will not expect an accurate answer from either of the assistant. Not because they have bugs in the program, but the fact that those so-called “personal assistants” are virtual robots in which they have to learn nonstop in order to improve further.</p>
+              <p>In any case, robots are not human and they cannot perform every task a human can do. To be clear, being emotional is not something a robot can do just yet. It can’t tell when it feels sad or happy. Simultaneously, a robot does not have the five senses like we do. In our human body, the nervous system must receive and process information about the outside world in order to react, communicate, and keep the body healthy and safe. Most information comes through the eyes which allow us to see, the ears allow us to hear sound, the nose allows us to smell and so on and so forth. For a robot, however, it doesn’t have all these senses that allow a robot to act like a human. To be a human, we must have self- awareness, spiritual curiosity, and philosophical musings. Most importantly, we must have “soul”. A robot is otherwise not entitled to be a human if it doesn’t possess any of those elements. </p>
+              <p>In the twenty-first century, automation is gradually replacing humans in most of the countries.  According to Futurism, 99% of insurance underwriter including health insurance, price life insurance, and homeowners insurance will outperform humans in the near future; 97% of farm labourer will be automated when the time comes; 94% of drill press operator will take over by robots. Any job that is routine analysis based will probably be done by technologies in the next five to 10 years. Eventually, humans might become military and economically useless. Specifically, machines in Amazon is replacing human labours, based on an interview from Jeff Bezos. He also mentioned that the company is going to bankrupt someday and he wishes that he dies before it is closed down. </p>
+              <p>
+Nick Bostrom, who is a Swedish philosopher, said “Humankind is unlikely to suffer this degeneration, because once Artificial Intelligence surpasses human intelligence, it might simply exterminate humankind.” As a matter of fact, artificial intelligence may take years to surpass humankind. When that happens, nevertheless, it will be the time when AI takes over the world and humans will lose value by the end of the century. Eventually, the rate of unemployment will be increased at a rapid speed. As more and more automation outsmarts humans, humans will relinquish the authority to the free market. In addition, technical difficulties or political objections might slow down the algorithmic invasion of the job market as machines become more intelligent.
+</p>
+              <p>Every day, we are flooded by the impossible amounts of data, of ideas. Most of the time, we are not machines. Indeed, we have to use it every second, every minutes, every hour. But, our brain is not designed to store all data in one place. For a human’s brain, we cannot tell how much memory we can store as some of them are gone due to ageing and thus free up spaces. Besides, some memories are not worth remembering in the first place, based on Scientific American. Therefore, the brain’s storage capacity is hard to measure. Compare to humans’ brain, machines can store all data for us, no matter whether it’s old or new, including our personal information.</p>
+              <p>As machines are becoming smarter and smarter, they, ultimately, will know me far better than I know myself. Just like Google Now, which is a software embedded in Android and IOS, it can easily track and predict our travel, our appointments, our web interest. To be more specific, it tracks you without your permission and we would become a target with a virtual follower following behind you. This will be the ultimate goal artificial intelligence is achieving today. The majority of these machines are pestilent tool that they will become lethal autonomous weapons in the future. </p>
+              <p>
+Recently, my parents and I went to a restaurant in Japan. With no waitresses’ helping, we thought we could choose where to sit. In fact, we had to get a ticket from a robot after instructed by a waitress. On the screen, we had to follow the instruction by selecting the number of people and the way we wanted to sit. Afterwards, the ticket would be printed out on the left side of the machine. When we found our table, we saw a small screen above the revolving belt which allowed us to choose any food and drinks we want. After ordering our food, we had to wait for them to come. Before our orders came, the screen would make a sound while popping up the pictures and we had to get them from the revolving belt according to our orders. This was one of the restaurants I came across in Nagano. The other restaurant I went in Niseko was quite similar to the one’s in Nagano but without a robot and a machine. 
+</p>
+              <p>
+Of course, using machines and robots are substantially efficient. But there are quite a few crucial reasons why they are not as effective as you think. Indeed, unemployment will be increased when all of them replace the unskilled workers. Most humans will be more likely to suffer after the improvement in technologies. Besides, if one of the machines is malfunctions and no one cares to repair it as the cost reparation is expensive and it takes time to restore those machineries, the number of products produced will be diminished. If the number of products produced is diminished, products in the market will be fewer.  If products in the market become fewer, the number of products sold will be insufficient. If the number of products sold is insufficient, the amount of profit made will be decreased. Consequently, the company might have to close down due to a long chain of events. This might sound unrealistic but that may be happening now or in the next five to 10 years. 
+</p>
+              <p>To conclude, having automation in the future is inevitable. It all depends on humans, if they choose not to rely on machineries, they will have to keep learning and reinvent themselves repeatedly. Otherwise, artificial intelligence will become an imminent threat to them.  </p>
+                                        <div align="right"><p>(1240 words)</p></div>
+            </div>
+              </div>
+            </div>
+         </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>             
