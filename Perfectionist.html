@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+ 
+
+h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 26px;
+     }   
+
+p {
+   padding: 3px 60px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      .Post {
+          font-size: 24px;
+          
+      }
+        .post-body {
+           color: #808080;
+      }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post</h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                 <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li></div> 
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     
+      
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2 >Perfectionist</h2>
+            <div align="Center"> <img src="Perfection.jpeg" width="850"></div> 
+              <br/> 
+              <div class="post-body">
+                  <p ng-repeat="paragraph in post.body"><b><i>"There's really no way to be perfect. Perfectionism is a silly trait to have, so in a lot of ways that inspired the world of 'Divergent,' in which everyone is striving toward that ideal and falling short of it." -Veronica Roth</i> </b></p>
+              </div></div>
+            <p>Imagine you are in an exam hall and you have done your exam, do you choose to leave or check your work thoroughly until the last minute? Imagine again, when you happen to see some grammar mistakes from your friend’s essay, are you going to correct them at once? This is where the problems come in if you are a phobia of mistake-making there is no way to be perfect as everyone makes mistakes every day. Therefore, mistakes cannot be avoided if you do not experience at least once.</p>
+             <p>Perfectionists tend to be anxious about making a plethora of mistakes, as if ‘If I make a mistake, it will be a disaster.’ In theory, perfectionism is a psychological disorder where perfectionists have the desire to strive for perfection. They feel that they cannot fail to do a certain task, as if a compulsion to be obligated to reach exceptionally idealistic ambition when a normal human being strives only for the best he can. Perfectionistic attitude, however, will cause disappointment. In fact, the desperation of having unrealistic aspiration can destroy their anticipation. </p>
+             <p>When perfectionists are trying so hard to achieve the highest standard, they will end up falling back from the standards as they procrastinate and stop working on their goals because they are afraid of not reaching them. They, eventually, will be living in a miserable life as they become stressed and do not want to move on with their life. Yet, they still hold on to their problems which can lead to suicidal. Besides, they will become depressed when they do not achieve certain goals. They always predict what it will happen if they do not attain their objectives. The question ‘What if?’ will always be stuck on their head. More importantly, they will blame themselves for not accomplishing that perfect standard. </p>
+             <p>Being a perfectionist has advantages. When a perfectionist wants to obtain a good grade at school, he will do exceedingly well on assignments and exams because he does not want to fail his work. Ultimately, he will receive a myriad of admiration from the others which he deserves and starts to react positively again. Eventually, he will have more motivation to work on other tasks. Moreover, whenever he spots a tiny mistake, he will correct it and add a few notes as he gets a sense of seeking out imperfections. Other than that, he will always strive for the best and comes off as professional. </p>
+             <p>I consider myself a perfectionist when it comes to grammar issue. Whenever I spot any grammar mistakes from anyone, I will correct it for them in order to make it ‘perfect’. To give you a quick example, ‘such a nice weather’ is grammatically correct whereas ‘such nice weather’ is not. It is conspicuous that a letter ‘a’ is missing in that sentence.  Although I am not a hundred per cent good at grammar, at least I know most of the basic grammar. As always, English is my favourite subject. Whenever people do not get the pronunciation right or have an issue with their grammar, I will sometimes feel irritated.</p>
+             <p>Nevertheless, there are drawbacks of perfectionism which will directly affect our mental health. Studies found that issues such as depression, anxiety, social anxiety disorder, post-traumatic disorder, and even suicide will occur. It also suggests that the higher the perfectionism, the more psychological disorder they are going to suffer, according to Sarah Egan, a senior research fellow at the Curtin University in Perth who specialises in perfectionism, eating disorder, and anxiety. The reason why mental health issues are more likely to occur is that people think that they are never good enough to meet their goals. Eventually, frustration will occur.</p>
+             <p>Some researchers found that there is adaptive perfectionism and maladaptive perfectionism. Adaptive perfectionism is where people always have high standards, motivation, and discipline. On the other hand, maladaptive perfectionism refers to those who do not meet their targets and feel frustrated afterwards. According to a study, more than 1,000 gifted Chinese students are more perfectionistic in an adaptive way. Whereas research shows that beating themselves up for mistakes is a sign of maladaptive perfectionism as if they cannot live up to parental expectation, making them more vulnerable and depressing.</p>
+            <p>
+To conclude, perfection does not happen all the time as there is no way to be perfect. It is only a way of thinking about your own self. After all, it is not about high standards. Instead, it is about unrealistic standard.
+</p>
+             <div align="right"><p>(788 words)</p></div>
+                     </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>
