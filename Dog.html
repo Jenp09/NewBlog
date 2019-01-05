@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+    h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 30px;
+     } 
+
+p {
+   padding: 3px 1px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      .post-body {
+           color: #808080;
+      }
+       .Post {
+        font-size: 25px;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                   <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li> </div>
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2>Dogs Should Not be Abandoned</h2>
+           <div align="Center"> <img src="RSPCA.jpeg" ></div> 
+           <br>   <div class="post-body"><i><b>“After we bring food home from the grocery store...Dogs must think we are the greatest hunters ever!” 
+                    -Ann Taylor
+</b></i></div>
+                  
+              
+              <p>We are a nation of dog-lovers. Nearly every British home owns a dog. Unfortunately, not all of them receive the love and care they deserve. Some dogs are neglected and are chained up in an unacceptable environment over a long period of time. Others are worse, abused. Every day, these dedicated, passionate RSPCA inspectors, like Anthony Joynes and Herchy Boal contented with dog owners’ abandonment and misuse of their pets and spring into action on behalf of dogs in trouble, returning them to health, happiness, and new living home. In any case, dogs provide unconditional love, companionship and empathy. Therefore, they should not be abandoned.</p>
+              <p>When we have the ability to raise or adopt a dog, we should have our responsibility to look after it properly until the end of the day. Dogs are not independent animals. Most of the time, they have to rely on our daily routines including hygiene and meals to maintain a healthy lifestyle. As an owner, we have to feed them at least three meals every day and groom them regularly. Also, they have to be walked frequently so that they get plenty of exercises to become stronger every week. When they are ill, we have to take them to the vet. By taking care of them, they know we love them. In return, they will come to us with a lick in our hand when they see us and treat us as a good friend. Dogs are like humans where they have emotions. They will express their feelings no matter they are happy or sad. </p>
+            <p>           Dogs are always good at accompanying people whenever they are lonely, ill or even suffer from depression. Dogs will be around them for the whole time though they cannot speak. In particular, children who suffer from autism need more medical attention. Autism is a kind of symptom that is very common around children which is characterised by great difficulty in communication and developing relationship with other people. Dogs are the best companion among other pets as those children can be guided gently through their isolated world. A study from the Journal of Pediatric Nursing shows that children with autism will easily form a strong bond with dogs. This means that they may have a better life with animals surrounding them. Researchers also found that 94% of those children have a good relationship with their dogs. This suggests that they tend to have greater social skills with a family pet from a young age. As a new study from the University of Missouri College of Veterinary Medicine says "Children with autism may especially benefit from interacting with dogs which can provide unconditional, nonjudgmental love and companionship." </p>
+              <p>In addition, dogs are gifted to have the ability to recognise us as an owner. When we are out, dogs wait for us patiently at the door until we come back. When we come home, they wag their tails excitedly and run towards us to greet us. To be more precise, dogs recognize their owners more than strangers. Scientists carried out an experiment by placing a group of dogs in front of charging faces on computer screens and monitored their eye movement to see where they were focusing. They found that when a picture of their owner flashed up on the screen, dogs were more likely to look directly into their eyes, suggesting that they recognise their face. On the other hand, dogs are less likely to recognise strangers when they ranged around the face.  Professor Outi Vainio at the University of Helsinki said that dogs fixed their gaze more often on familiar faces and eyes rather than strangers. This can suggest that they are more likely to obey their owner than strangers. At the same time, she also found that they looked at images of dogs longer than images of human, regardless of familiarity of the faces presented in the images. </p>
+              <p>Yet, dogs are animals and we are human. We cannot anthropomorphise them whenever we desire. In other words, we must not give human characteristics to animals. The reason why people treat their pets as human is because they lack social connections with other people and become lonely. Eventually, they seek out connections from nonhuman items. The other term of Anthropomorphism is known as dehumanisation where humans are represented as nonhuman objects or animals. Some owners do not give their pets a happy home. For example, dogs are kept outdoors without accessing to adequate shelter, food, and water. Consequently, malnutrition and starvation can be occurred. Others claim that they are busy at work or they are incapable of taking care of their animals because of their age or other reasons. Despite that, owners have to take responsibility for their own action. </p>
+<p>According to Independent, more than 80 dogs were found neglected in a house in April last year after an investigation of a woman’s death. Since there was no further action to be taken, RSPCA inspectors seized the animals from the “filthy, cramped” house. All other Chihuahuas were taken to the charity’s Newbrook Farm animal hospital in the city. Unluckily, one animal had to be put down. Four were returned to the husband after RSPCA staff helped to make the home suitable. The rest of the dogs were re-homed. </p>
+            <p>In conclusion, we, as an owner of our pets, cannot sit and wait for death. People who do not care to look after their pets properly have to be prosecuted and banned from keeping animals for their action. We must rehabilitate them whenever possible in order to protect them and provide them a better home. </p>
+            
+              <div align="right">
+                  <p>(958 words)</p>
+            
+            </div>
+            </div>
+              </div>
+            </div>
+         </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>
