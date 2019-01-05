@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+
+      <link rel="stylesheet" href="CSS/Post.css">
+
+  <style>
+    
+    h2 {
+       padding: 2px 60px;  
+    color: #79B9D2; 
+    font-size: 30px;
+     } 
+
+p {
+   padding: 3px 1px; 
+}
+h3 {
+    padding: 3px 60px;
+    color: #79B9D2;
+}
+      
+       .Post {
+        font-size: 25px;
+    }
+    
+    </style>
+</head>
+
+<body>
+
+  <body ng-app="blogApp">
+  
+  <div ng-controller="BlogController as blog">
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-s-4">
+              <h2 ng-click="blog.selectTab('blog')" class="push-left">Blog Post </h2>
+            </div>
+            <div class="offset-s-4 col-s-4">
+              <nav role='navigation' class="push-right">
+                <ul>
+                   <div class="Post"> <li><a href="BlogContent.html" ng-click="blog.selectTab('blog')">See All Posts</a></li> </div>
+                </ul>
+              </nav> 
+            </div>
+          </div>
+        </div>
+        </div>
+     <div class="content">
+        <div class="container">
+          <div class="row">
+            <ul class="post-grid" ng-show="blog.isSelected('blog')">
+          <li ng-repeat="post in blog.posts" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="blog.selectTab($index)">
+       
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blog.posts" ng-show="blog.isSelected($index)">
+          <div>
+            
+            <h2>More Knowledge Increases Doubt</h2>
+            <div class=""><div align="Center"> <img src="Doubt.jpeg" ></div></div> 
+          <br> <p>
+We are born to be educated and skilful in order to become wise. But where do we gain the knowledge from? They can either be obtained from the school, work, or even self-education. In theory, knowledge is facts, pieces of information, and skills that obtain from education or experience. People can learn a myriad of knowledge eruditely or they can just learn one thing in a day. It depends on how they are going to learn. 
+              </p>
+              <p>As Confucius said, “In Learning, there’s no first or last; When one learns and progresses fast, then the last shall become the first—She would be my Teacher at last.” People would not compete with others for having the most knowledge. In fact, it is all about learning new skills and keeping for themselves and then revise them again until they remember the content and use them appropriately. There is no doubt that acquiring brand new knowledge broadens the way of thinking as it allows people to anticipate with their brain when they are generating some interesting ideas. </p>
+              <p></p>
+              <p>Our knowledge is accumulated from the first day we were educated at school. That is the reason why we have plenty of topics to talk about when we are communicating with friends and family. We can easily elaborate our ideas without thinking it through. Knowledge is unlimited and one is never too old to learn. However, Goethe said, “We know accurately only when we know little; doubt grows with knowledge.” </p>
+              <p>In my opinion, I do agree with his statement. People tend to ask questions when they do not understand certain things. Asking questions is the art of learning when we want to know more about a specific topic. Yet, when we receive numerous knowledge in a day, we may begin to doubt whether the information is reliable or believable. It is all over the net and we cannot trust them easily with our bare eyes. We have to do some research in light of acquiring our secondary data and widening our knowledge. Since some information such as history cannot be changed because history is history and we cannot travel back in time to reshape the event. Therefore, the only thing we can do is to look for answers via journals, historical books, and other related materials to have a better understanding of the event to prove that it really happened. This can lead to having additional information for a person more than he needed. </p>
+              <p>Although history cannot be reformed, we can learn from mistakes and improve what we do not want to happen again. Just like science, we can improve scientific instruments to make them better to increase the chance of success. But how can scientists do it? This is the question that people tend to raise. Doubt leads to more research and research leads to new findings. When scientists are in doubt, they will carry out research about their current findings. What they usually do is to make a hypothesis through their findings that they feel unsure about. The next step they are going to do is to formulate hypothesis, design and carry out experiments to prove their current finding is wrong and they have to come up with a new one. Experiments have to be carried out many times in order to prove the theories or findings right or wrong. Afterwards, they can prove to the world that they have really discovered something scientifically. </p>
+              <p>In our modern society, we are more well-developed and lucky to have our own laptops and mobile phones.  In addition to the worldwide internet, we are able to search for new information we are unfamiliar with. Philosophically, doubt is the feeling of uncertain towards the truth. People think that something is not right is because their mind remains suspended between two or more contradictory propositions. Because of the low reliability of the information, we continue to seek for the real answers to counter-argue the evidence that we think is incorrect. </p>
+              <p>
+As Henri Poincare, who is a French mathematician theoretical physicist, engineer, and philosopher of science, said, “To doubt everything or to believe everything is two equally convenient solutions; both dispense with the necessity of reflection.” Therefore, we must have an equal level between doubt and confidence before accepting and believing the truth. 
+</p>
+                  <div align="right"><p>(712 words)</p></div>
+            </div>
+              </div>
+            </div>
+         </div>
+      </div>
+      </div>
+    </body>
+    </body>
+</html>
